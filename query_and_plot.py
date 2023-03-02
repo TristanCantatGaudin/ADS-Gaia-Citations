@@ -7,10 +7,6 @@ import numpy as np
 
 gaiaPapers = ['2016A&A...595A...1G','2016A&A...595A...2G','2018A&A...616A...1G','2021A&A...649A...1G','2022arXiv220800211G']
 
-gaiaPapers = ['2016A&A...595A...1G']
-
-
-
 allDateBins = []
 allCounts = []
 
