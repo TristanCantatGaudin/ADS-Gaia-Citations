@@ -1,9 +1,7 @@
 name: Update Gaia Citations Plot
 on:
   schedule:
-    - cron: '0 0-21/3 * * *'
-  push:
-    branches: [ "main" ]
+    - cron: '0 12 * * *'
   workflow_dispatch:
 jobs:
   update_plot:
