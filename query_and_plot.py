@@ -85,9 +85,9 @@ else:
 	plt.style.use('cyberpunk')
 	
 	
-#### Redo the font thing because cyberpunk overrides it?
+#### Reset font because cyberpunk overrides it?
 from matplotlib import font_manager
-font_dirs = ['/Users/cantat/cheatsheet/style/']
+font_dirs = ['.']
 font_files = font_manager.findSystemFonts(fontpaths=font_dirs)
 for font_file in font_files:
     font_manager.fontManager.addfont(font_file)
