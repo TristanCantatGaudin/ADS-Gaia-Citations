@@ -142,7 +142,7 @@ plt.xlabel('year')
 plt.ylabel('citations per month')
 plt.xlim( np.datetime64('2016-01-01T00:00') , np.datetime64('2024-12-30T23:59') )
 plt.legend(loc='upper left',prop={'size': 12})
-plt.title('updated: %s UTC' % (np.datetime64('now').item().strftime("%Y-%m-%d %H:%M")) ,loc='right')
+plt.title('updated %s UTC' % (np.datetime64('now').item().strftime("%Y-%m-%d %H:%M")) , loc='right' , alpha=0.2)
 
 #mplcyberpunk.add_glow_effects()
 mplcyberpunk.make_lines_glow(n_glow_lines=10)
