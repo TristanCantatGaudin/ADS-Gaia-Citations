@@ -3,7 +3,9 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
+KEY = os.environ.get("ADS_API_TOKEN")
 
 gaiaPapers = ['2016A&A...595A...1G','2016A&A...595A...2G','2018A&A...616A...1G','2021A&A...649A...1G','2022arXiv220800211G']
 
@@ -19,7 +21,7 @@ for m in gaiaPapers:
 
 	#query ten times 2000
 	while finished==False:
-		queryString = "curl -H 'Authorization: Bearer:QEmS3kKLD12tLs0vFpm1xkvxf3E7stqvXSKlvCyd' 'https://api.adsabs.harvard.edu/v1/search/query?q=citations(bibcode%3A"+m.replace('&','%26')+")&fl=pubdate&rows=2000&start="+str(pageNb*2000)+"'"
+		queryString = "curl -H 'Authorization: Bearer:"+KEY+"' 'https://api.adsabs.harvard.edu/v1/search/query?q=citations(bibcode%3A"+m.replace('&','%26')+")&fl=pubdate&rows=2000&start="+str(pageNb*2000)+"'"
 		print( queryString )
 		rawResult =  subprocess.check_output(queryString, shell=True).decode('utf-8')
 		print( rawResult )
