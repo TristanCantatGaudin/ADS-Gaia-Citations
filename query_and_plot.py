@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
-KEY = os.environ.get("ADS_API_TOKEN")
 KEY = 'QEmS3kKLD12tLs0vFpm1xkvxf3E7stqvXSKlvCyd'
 
 gaiaPapers = ['2016A&A...595A...1G','2016A&A...595A...2G','2018A&A...616A...1G','2021A&A...649A...1G','2022arXiv220800211G']
