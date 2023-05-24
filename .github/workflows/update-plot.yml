@@ -24,7 +24,6 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git pull origin master
           git add citations_per_month.png
           git commit -m "Updated plot on `date` with GitHub Actions"
           git push origin main
