@@ -20,8 +20,8 @@ jobs:
       - name: Run Script and Update Plot
         run: |
           python query_and_plot.py
-        secrets:
-          ADS_API_TOKEN = ${{ secrets.ADS_API_TOKEN }}
+        env:
+          ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
       - name: Commit and Push Changes
         run: |
           git config --local user.email "actions@github.com"
