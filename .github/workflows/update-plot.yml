@@ -26,4 +26,4 @@ jobs:
           git config --local user.name "GitHub Actions"
           git add citations_per_month.png
           git commit -m "Updated plot on `date` with GitHub Actions"
-          git push origin main
+          git push origin main --force
