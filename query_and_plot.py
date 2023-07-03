@@ -7,7 +7,7 @@ import os
 
 KEY = os.environ.get("ADS_API_TOKEN")
 
-gaiaPapers = ['2016A&A...595A...1G','2016A&A...595A...2G','2018A&A...616A...1G','2021A&A...649A...1G','2022arXiv220800211G']
+gaiaPapers = ['2016A&A...595A...1G','2016A&A...595A...2G','2018A&A...616A...1G','2021A&A...649A...1G','2023&A...674A...1G']
 
 allDateBins = []
 allCounts = []
