@@ -15,4 +15,4 @@ DR2: https://ui.adsabs.harvard.edu/abs/2018A&A...616A...1G
 
 EDR3: https://ui.adsabs.harvard.edu/abs/2021A&A...649A...1G
 
-DR3: https://ui.adsabs.harvard.edu/abs/2022arXiv220800211G
+DR3: https://ui.adsabs.harvard.edu/abs/2023A%26A...674A...1G
