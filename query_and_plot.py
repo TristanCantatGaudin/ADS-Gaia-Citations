@@ -112,6 +112,8 @@ maxMonth = np.datetime64('now') #e.g. any date during Dec includes Dec and remov
 allTimeBins = np.array( allTimeBins ) #so we can filter easily later
 
 labels=['The Gaia mission','DR1','DR2','EDR3','DR3']
+allX=[]
+allY=[]
 plt.figure(3,figsize=(7,3))
 for i,c in enumerate(allCounts):
 	newCount = np.array( [ allCounts[i][allDateBins[i] == XXX][0] if XXX in allDateBins[i] else 0 for XXX in allTimeBins ] )
@@ -137,6 +139,8 @@ for i,c in enumerate(allCounts):
 		minMonth = np.datetime64('2022-04-15T00:00')
 		plt.plot( allTimeBins[(allTimeBins>minMonth)&(allTimeBins<maxMonth)] , newCount[(allTimeBins>minMonth)&(allTimeBins<maxMonth)] , label=labels[i] )
 
+	allX.append( allTimeBins[(allTimeBins>minMonth)&(allTimeBins<maxMonth)] )
+	allY.append( newCount[(allTimeBins>minMonth)&(allTimeBins<maxMonth)] )
 
 
 
@@ -150,3 +154,28 @@ plt.title('updated %s UTC' % (np.datetime64('now').item().strftime("%Y-%m-%d %H:
 mplcyberpunk.make_lines_glow(n_glow_lines=10)
 plt.tight_layout()
 plt.savefig('citations_per_month.png')
+
+import plotly
+import plotly.graph_objects as go
+
+fig = go.Figure()
+for i,c in enumerate(allCounts):
+    fig.add_trace(go.Scatter(x=allX[i], y=allY[i],
+                        mode='lines',
+                        name=labels[i]))
+
+fig.update_layout(
+    template='plotly_dark',
+    title="Citations to Gaia papers",
+    xaxis_title="date",
+    yaxis_title="citations per month",
+    font=dict(
+        family="NotesEsa",
+        size=14,
+        color="white"
+    )
+)
+
+#htmlfile = plotly.offline.plot(fig, filename='name.html', auto_open=False)
+# so the js is not inside the html file, but loaded from the web:
+fig.write_html("ads-citations-plotly.html",include_plotlyjs="cdn")
