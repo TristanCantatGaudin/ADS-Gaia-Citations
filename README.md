@@ -5,6 +5,8 @@ Display monthly citations to Gaia papers
 
 ![image](citations_per_month.png)
 
+This graph is updated every day through GitHub actions. It is also available in [plotly version](https://tristancantatgaudin.github.io/ADS-Gaia-Citations/ads-citations-plotly.html).
+
 ---
 
 The Gaia mission: https://ui.adsabs.harvard.edu/abs/2016A&A...595A...1G
