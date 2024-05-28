@@ -5,7 +5,7 @@ Display monthly citations to Gaia papers
 
 ![image](citations_per_month.png)
 
-This graph is updated every day through GitHub actions. It is also available in [plotly version](https://tristancantatgaudin.github.io/ADS-Gaia-Citations/ads-citations-plotly.html).
+This graph is updated every day through GitHub actions. It is also available as an interactive [plotly figure](https://tristancantatgaudin.github.io/ADS-Gaia-Citations/ads-citations-plotly.html).
 
 ---
 
