@@ -29,7 +29,7 @@ for m in gaiaPapers:
     # query ten times 2000
     while finished is False:
         queryString = (
-            "curl -H 'Authorization: Bearer:"
+            "curl -H 'Authorization: Bearer "
             + KEY
             + "' 'https://api.adsabs.harvard.edu/v1/search/query?q=citations(bibcode%3A"
             + m.replace("&", "%26")
