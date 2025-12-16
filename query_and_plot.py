@@ -172,7 +172,7 @@ for i, c in enumerate(allCounts):
 
 plt.xlabel("year")
 plt.ylabel("citations per month")
-plt.xlim(np.datetime64("2016-01-01T00:00"), np.datetime64("2025-12-30T23:59"))
+plt.xlim(np.datetime64("2016-01-01T00:00"), np.datetime64("2026-12-30T23:59"))
 plt.legend(loc="upper left", prop={"size": 12})
 plt.title(
     "updated %s UTC" % (np.datetime64("now").item().strftime("%Y-%m-%d %H:%M")),
