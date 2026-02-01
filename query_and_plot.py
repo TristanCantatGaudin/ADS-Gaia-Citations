@@ -59,9 +59,9 @@ for m in gaiaPapers:
     )  # now date is the index, and the column date is removed: the dataframe has no columns
 
     # this is the part that makes a histogram:
-    counts = list(df.resample("M").size().tolist())  # a list of integers
+    counts = list(df.resample("ME").size().tolist())  # a list of integers
     dateBins = list(
-        df.resample("M").size().index.values
+        df.resample("ME").size().index.values
     )  # a list of numpy.datetime64 objects
     # pandas returns the END of the bin, so e.g. for August the bin is "August 31st"
     dateBins = [
